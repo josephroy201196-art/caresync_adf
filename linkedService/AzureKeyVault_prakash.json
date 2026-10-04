@@ -1,0 +1,10 @@
+{
+	"name": "AzureKeyVault_prakash",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://caresync-keyvaultprakash.vault.azure.net/"
+		}
+	}
+}
