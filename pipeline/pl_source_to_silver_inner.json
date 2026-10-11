@@ -340,7 +340,7 @@
 										"source": {
 											"type": "PostgreSqlV2Source",
 											"query": {
-												"value": "select * from public.@{activity('read_table_details').output.firstRow.source_table_name}\n@{\n    if(equals(activity('read_table_details').output.firstRow.load_type,'FULL'), '',\n    concat(' WHERE ', activity('read_table_details').output.firstRow.watermark_column, ' > ''', activity('read watermark value').output.value, ''''))\n}",
+												"value": "select * from public.@{activity('read_table_details').output.firstRow.source_table_name}\n@{\n    if(equals(activity('read_table_details').output.firstRow.load_type,'FULL'), '',\n    concat(' WHERE ', activity('read_table_details').output.firstRow.watermark_column, ' > ''', activity('read watermark value').output, ''''))\n}\n",
 												"type": "Expression"
 											},
 											"queryTimeout": "02:00:00"
